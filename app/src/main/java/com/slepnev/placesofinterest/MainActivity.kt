@@ -2,6 +2,7 @@ package com.slepnev.placesofinterest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         rvPlaces.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        //rvPlaces.layoutManager = GridLayoutManager(this@MainActivity, 2)
         rvPlaces.adapter = placeAdapter
 
         for (i in Place.PLACE_NAMES.indices) {
